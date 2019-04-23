@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            .error{color: red;}
+        </style>
+    </head>
+    <body>
+            <form action="/verify">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username"> </input>
+                <p class="error">{{username_er}}</p>
+                <label for="password">Password: </label>
+                <input type="text" name="password" id="password"></input>
+                <p class="error">{{password_er}}</p>
+                <label for="passv">Verify Password: </label>
+                <input type="text" name="passv" id="passv"> </input>
+                <p class="error">{{password_er}}</p>
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email"> </input>
+                <p class="error">{{email_er}}</p>
+                <input type="submit"> </input>
+            </form>
+    
+        
+    </form>
+    </body>
+</html>
+
