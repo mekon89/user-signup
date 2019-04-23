@@ -1,6 +1,5 @@
 from flask import Flask, request, redirect, render_template
 import cgi
-from email_function import check_email, final_check
 
 app=Flask(__name__)
 app.config['DEBUG']=True
