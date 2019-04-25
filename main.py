@@ -17,16 +17,16 @@ def check_email(email):
 def index():
     return render_template("base.html")
 
-@app.route("/verify")
+@app.route("/verify", methods=["post"])
 def index2():
     username_er=""
     password_er=""
     email_er=""
     v_password_er=""
-    username=request.args.get("username")
-    pass1=request.args.get("password")
-    pass2=request.args.get("passv")
-    email=request.args.get("email")
+    username=request.form["username"]
+    pass1=request.form["password"]
+    pass2=request.form["passv"]
+    email=request.form["email"]
 
     
     if len(username)<3 or len(username)>20 or " " in username:

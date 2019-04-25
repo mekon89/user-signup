@@ -7,15 +7,16 @@
         </style>
     </head>
     <body>
-            <form action="/verify">
+        <h1>User Signup Page</h1>
+            <form action="/verify" METHOD="POST">
                 <label for="username">Username: </label>
                 <input type="text" name="username" id="username"> </input>
                 <p class="error">{{username_er}}</p>
                 <label for="password">Password: </label>
-                <input type="text" name="password" id="password"></input>
+                <input type="password" name="password" id="password">Case sensitive!</input>
                 <p class="error">{{password_er}}</p>
                 <label for="passv">Verify Password: </label>
-                <input type="text" name="passv" id="passv"> </input>
+                <input type="password" name="passv" id="passv">Case sensitive!</input>
                 <p class="error">{{password_er}}</p>
                 <label for="email">Email: </label>
                 <input type="text" name="email" id="email"> </input>
