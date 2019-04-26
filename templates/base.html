@@ -10,16 +10,16 @@
         <h1>User Signup Page</h1>
             <form action="/verify" METHOD="POST">
                 <label for="username">Username: </label>
-                <input type="text" name="username" id="username"> </input>
+                <input type="text" name="username" id="username" value="{{username}}"> </input>
                 <p class="error">{{username_er}}</p>
                 <label for="password">Password: </label>
-                <input type="password" name="password" id="password">Case sensitive!</input>
+                <input type="password" name="password" id="password" value="">Case sensitive!</input>
                 <p class="error">{{password_er}}</p>
                 <label for="passv">Verify Password: </label>
                 <input type="password" name="passv" id="passv">Case sensitive!</input>
-                <p class="error">{{password_er}}</p>
+                <p class="error">{{v_password_er}}</p>
                 <label for="email">Email: </label>
-                <input type="text" name="email" id="email"> </input>
+                <input type="text" name="email" id="email" value="{{email}}"> </input>
                 <p class="error">{{email_er}}</p>
                 <input type="submit"> </input>
             </form>
