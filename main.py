@@ -11,6 +11,22 @@ def check_email(email):
         return True
     else:
         return False
+    
+def ecount(email):
+    atcount=0
+    dotcount=0
+    for c in email:
+        if c=="@":
+            atcount = atcount + 1
+        elif c==".":
+            dotcount = dotcount + 1
+    if not email:
+        return True
+    elif atcount==1 and dotcount==1:
+        return True
+    else:
+        return False
+    
 
 
 @app.route("/")
@@ -35,11 +51,11 @@ def index2():
     if len(pass1)<3 or len(pass1)>20 or " " in pass1 or pass1!=pass2:
         password_er="Invalid password, passwords must match(no spaces, and be 3-20 characters)"
     
-    if not check_email(email):
+    if not check_email(email) or not ecount(email):
         email_er="Invalid email"
     def final_check(ue, pe, ee):
         if ue or pe or ee:
-            return render_template("base.html",username_er=ue, password_er=pe, email_er=ee)
+            return render_template("base.html",usernmame=username, username_er=ue, password_er=pe, email_er=ee)
         else:
             return render_template("welcome.html")
 
